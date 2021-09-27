@@ -1,6 +1,7 @@
 pipeline {
     agent any
     
+    sh 'mvn -version'
 
     stages {
         stage ('Compile Stage') {
@@ -8,7 +9,7 @@ pipeline {
             steps {
                 withMaven(maven : 'maven') {
                     sh 'mvn clean compile'
-                    sh 'mvn -version'
+                    
                 }
             }
         }
