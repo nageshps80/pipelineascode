@@ -5,6 +5,8 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
+                def mvnHome = tool name: 'Maven', type: 'maven'
+               sh "${mvnhome}/bin/mvn package"
                 withMaven(maven : 'maven 3.8.2') {
                     sh 'mvn clean compile'
                 }
