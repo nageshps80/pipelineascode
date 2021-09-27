@@ -7,6 +7,7 @@ pipeline {
             steps {
                 withMaven(maven : 'maven') {
                     sh 'mvn clean compile'
+                    sh 'mvn -version'
                 }
             }
         }
