@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    cleanWs()
+    cleanWs
 
     stages {
         stage ('Compile Stage') {
